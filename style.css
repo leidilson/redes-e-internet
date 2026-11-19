@@ -1,0 +1,481 @@
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    color: #222222;
+
+    max-width: 900px;
+    width: 90%;
+
+    margin: 50px auto;
+    padding: 45px;
+
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+
+    animation: fadeIn 0.8s ease both;
+}
+
+/* =================================
+   TÍTULOS
+================================= */
+
+h1:first-of-type {
+    color: #171717;
+    font-size: 36px;
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    padding-bottom: 18px;
+    border-bottom: 2px solid #171717;
+
+    animation: slideUp 0.7s ease both;
+}
+
+h1:not(:first-of-type) {
+    color: #171717;
+    font-size: 25px;
+    margin-top: 45px;
+    letter-spacing: -0.7px;
+}
+
+h2 {
+    color: #444444;
+    font-size: 21px;
+    font-weight: 650;
+
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+/* =================================
+   PARÁGRAFOS
+================================= */
+
+p {
+    color: #666666;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    text-align: left;
+    margin-top: 8px;
+}
+
+/* =================================
+   LINKS
+================================= */
+
+a {
+    display: inline-block;
+
+    color: #ffffff;
+    background-color: #171717;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    padding: 11px 20px;
+    border-radius: 7px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+a:hover {
+    background-color: #444444;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+a:focus-visible {
+    outline: 3px solid #777777;
+    outline-offset: 4px;
+}
+
+/* =================================
+   ANIMAÇÕES
+================================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 600px) {
+    body {
+        width: 94%;
+        margin: 20px auto;
+        padding: 25px 20px;
+    }
+
+    h1:first-of-type {
+        font-size: 28px;
+    }
+
+    h1:not(:first-of-type) {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+/* Respeitar preferência por menos animações */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* =================================
+   CABEÇALHO E NAVEGAÇÃO
+================================= */
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* =================================
+   CONTEÚDO PRINCIPAL
+================================= */
+
+main {
+    width: 100%;
+    margin: 30px auto;
+}
+
+section {
+    background-color: #ffffff;
+
+    padding: 25px;
+    margin-bottom: 25px;
+
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.025);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* =================================
+   SUBTÍTULOS
+================================= */
+
+h3 {
+    color: #171717;
+    font-size: 18px;
+    font-weight: 650;
+
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
+/* =================================
+   RODAPÉ
+================================= */
+
+footer {
+    border-top: 1px solid #dddddd;
+
+    padding-top: 20px;
+    margin-top: 35px;
+
+    text-align: center;
+}
+
+footer p {
+    color: #888888;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        justify-content: center;
+    }
+
+    section {
+        padding: 20px 16px;
+        margin-bottom: 18px;
+    }
+
+    main {
+        margin: 20px auto;
+    }
+
+    footer {
+        margin-top: 25px;
+    }
+}
+
+
+/* =================================
+   INDICADOR DA PÁGINA ATUAL
+================================= */
+
+.pagina-atual {
+    display: inline-block;
+
+    background-color: #eeeeee;
+    color: #171717;
+
+    padding: 9px 16px;
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Navegação em dispositivos móveis */
+
+@media (max-width: 600px) {
+    nav {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+/* =================================
+   TIPOGRAFIA
+================================= */
+
+body {
+    font-family: "Inter", sans-serif;
+    letter-spacing: -0.2px;
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+h2, h3 {
+    line-height: 1.4;
+}
+
+p {
+    max-width: 720px;
+}
+
+/* =================================
+   ANIMAÇÕES DE ENTRADA
+================================= */
+
+main section {
+    animation: sectionReveal 0.8s ease both;
+}
+
+main section:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+@keyframes sectionReveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================================
+   INTERAÇÃO DOS LINKS
+================================= */
+
+nav a:active {
+    transform: scale(0.96);
+}
+
+/* =================================
+   ACESSIBILIDADE
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    main section {
+        animation: none;
+    }
+}
+
+
+/* =================================
+   INTRODUÇÃO DA PÁGINA
+================================= */
+
+.intro {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 10px 5px;
+}
+
+.intro:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* =================================
+   GRELHA DE EQUIPAMENTOS
+================================= */
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* =================================
+   CARTÕES
+================================= */
+
+.equipment-card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.equipment-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagens */
+
+.equipment-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+}
+
+/* Conteúdo */
+
+.equipment-content {
+    padding: 20px;
+}
+
+.equipment-content h2 {
+    margin-top: 0;
+    color: #171717;
+    font-size: 19px;
+}
+
+.equipment-content p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Etiquetas */
+
+.equipment-tag {
+    display: inline-block;
+
+    background: #f1f1f1;
+    color: #555555;
+
+    padding: 6px 10px;
+    border-radius: 5px;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 750px) {
+    .equipment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .equipment-card img {
+        height: 200px;
+    }
+}
